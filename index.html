@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 1 - Ordem Crescente</h1>
+    <button onclick="ordenarValores()">Ordenar Valores</button>
+    <div id="result"></div>
+
+    <script>
+        function ordenarValores() {
+            let valores = [];
+            for (let i = 0; i < 5; i++) {
+                let valor = prompt("Digite um valor:");
+                valores.push(Number(valor));
+            }
+            valores.sort((a, b) => a - b);
+            
+            document.getElementById('result').innerHTML = 'Valores ordenados: ' + valores.join(', ');
+        }
+    </script>
+</body>
+</html>
